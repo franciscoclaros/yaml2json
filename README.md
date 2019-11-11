@@ -5,7 +5,7 @@ A small tool for converting YAML files into JSON
 ## Installation
 
 ```
-curl -Lo yaml2json https://github.com/ssuareza/yaml2json/releases/latest/download/v0.0.1/yaml2json-v0.0.1-darwin-amd64
+curl -sLo yaml2json https://github.com/ssuareza/yaml2json/releases/download/v0.0.1/yaml2json-v0.0.1-darwin-amd64
 chmod +x yaml2json
 sudo mv yaml2json /usr/local/bin/
 ```
