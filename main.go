@@ -7,6 +7,7 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
+// YamlToJSON convert yaml format to json
 func YamlToJSON(m []byte) (interface{}, error) {
 	var body interface{}
 	yaml.Unmarshal([]byte(m), &body)
@@ -14,6 +15,7 @@ func YamlToJSON(m []byte) (interface{}, error) {
 	return body, nil
 }
 
+// FormatJSON adds json format
 func FormatJSON(i interface{}) interface{} {
 	switch x := i.(type) {
 	case map[interface{}]interface{}:
@@ -30,11 +32,13 @@ func FormatJSON(i interface{}) interface{} {
 	return i
 }
 
+// PrintYaml prints yaml
 func PrintYaml(in map[interface{}]interface{}) {
 	output, _ := yaml.Marshal(in)
 	fmt.Printf("%s", output)
 }
 
+// PrintJSON prints json
 func PrintJSON(v interface{}) {
 	output, _ := prettyjson.Marshal(v)
 	fmt.Println(string(output))
